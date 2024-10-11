@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+.later-head img{
+margin-left: 20%;
+}
+
+.cardview{
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 20px;
+
+}
+  .form-container {
+    border: #000000;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .group {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px; 
+}
+
+.group > div {
+  display: flex;
+    flex: 1;
+    margin:5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px; 
+    font-weight: bold;
+  }
+
+input {
+    font-size: 14px;
+    padding: 1px;
+}
+
+.sub{
+  display: flex;
+}
+.sub textarea {
+ width: 100%;
+ font-size: 14px;
+}
+.beforetbl{
+  font-weight:normal;
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  .form-sub input, .form-sub select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  .form-group input, .form-group select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  .items-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Removes double borders */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #ffffff; /* Ensures the table has a white background */
+}
+
+.items-table th {
+    border: 1px solid #ddd; /* Lighter border color for a softer look */
+    padding: 12px; /* Larger padding for more space */
+    text-align: center;
+    font-size: 18px; /* Larger, more readable text */
+    background-color: #4CAF50; /* Adds a vibrant green background */
+    color: white; /* White text on green */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.items-table th:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.items-table td {
+    border: 1px solid #ddd; /* Light border around cells */
+    padding: 10px; /* Added padding for better spacing */
+    text-align: center;
+    font-size: 16px; /* Set a consistent font size */
+}
+
+.items-table tr:hover {
+    background-color: #f5f5f5; /* Light grey background when hovering over rows */
+}
+
+.items-table input {
+    width: calc(100% - 22px); /* Full width minus padding/margins */
+    padding: 12px; /* Larger padding for a better feel */
+    margin: 5px 0; /* Spacing between inputs */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Larger font for input fields */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+.items-table input:focus {
+    outline: none; /* Removes the default blue outline */
+    border-color: #4CAF50; /* Green border when focused */
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.3); /* Subtle shadow */
+}
+
+.items-table input:hover {
+    border-color: #888; /* Slightly darker border on hover */
+}
+  .total-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .btn-submit:hover {
+    background-color: #45a049;
+  }
+
+  .btn-add, .btn-remove {
+    background-color: #ff5733;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+  }
+
+  .btn-remove {
+    background-color: #dc3545;
+  }
+
+  .btn-add:hover {
+    background-color: #ff4d1a;
+  }
+
+  .btn-remove:hover {
+    background-color: #c82333;
+  }

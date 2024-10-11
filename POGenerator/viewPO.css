@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  .cardview{
+    border-radius: 5px;
+    /* border: 1px solid black; */
+  }
+
+  .group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.group p {
+    margin: 0; 
+}
+span#to-address-display {
+    display: block; /* This makes the span start on a new line */
+    margin-left: 20px; /* Adjust this value to move the span to the right */
+}
+
+table.items-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures no double borders between cells */
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid; /* Outer border for the table */
+}
+table.items-table th, table.items-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Thin borders between cells */
+}
+table.items-table input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.addresses-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the two address boxes */
+}
+
+.address-box {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.address-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.address-content {
+    margin-left: 20px;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info span {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .addresses-container {
+        flex-direction: column;
+    }
+}
