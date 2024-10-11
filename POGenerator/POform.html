@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="swastik">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order Form</title>
+    <script src="POform.js"></script>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+<div class="cardview">
+    <form id="purchaseOrderForm">
+        <div class="later-head">
+            <img src="header.png" alt="Header">
+        </div>
+        <div class="group">
+            <div>
+                <label for="PO-no">PO No.:</label>
+                <input type="text" id="PO-no" name="PO-no" required>
+            </div>
+            <div>
+                <label for="order-date">Order Date:</label>
+                <input type="date" id="order-date" name="order-date" required>
+            </div>
+        </div>
+        
+        <div>
+            <label for="to-address">To,</label>
+            <textarea class="To-address" required></textarea>
+        </div>
+        <br><br>
+        <!-- <label>Dear Sir,</label> -->
+        <br>
+        <!-- <div class="sub">
+            <label for="sub">Sub:</label>
+            <textarea type="text" id="sub" name="sub" required></textarea>
+        </div>
+        <label class="beforetbl">With reference to above we are pleased to place our purchase order as per the details given below along with the terms and 
+            Conditions enumerated hereunder:</label> -->
+        <table id="items-table" class="items-table">
+            <thead>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Item Description</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Qty (In Pair) </th>
+                    <th>UOM</th>
+                    <th>Unit Price in (INR) </th>
+                    <th>Total Value (INR)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="item-1" placeholder="Item Name" required></td>
+                    <td><input type="text" name="make-1" placeholder="Make" required></td>
+                    <td><input type="text" name="model-1" placeholder="Model" required></td>
+                    <td><input type="number" name="quantity-1" placeholder="Qty" min="1"  oninput="calculateTotalValue(this)" required></td>
+                    <td><input type="text" name="uom-1" placeholder="UOM" required></td>
+                    <td><input type="number" name="price-1" placeholder="Price" oninput="calculateTotalValue(this)" required></td>
+                    <td><input type="text" name="total-1" placeholder="Total" readonly></td>
+                    <td><button type="button" onclick="removeItemRow(this)" class="btn-remove">Remove</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <button type="button" onclick="addItemRow()" class="btn-add">Add Item</button>
+                    </td></tr>
+                
+                <tr>
+                    <td colspan="7" style="text-align:right; font-weight:bold;">Total Base Price (INR):</td>
+                    <td><input type="text" id="total-base-price" placeholder="0" readonly style="background-color: #f4f4f4;"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align:right; font-weight:bold;">IGST @ 18%:</td>
+                    <td><input type="text" id="igst" placeholder="0" readonly style="background-color: #f4f4f4;"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align:right; font-weight:bold;">Round Off (+/-):</td>
+                    <td><input type="text" id="round-off" placeholder="0" oninput="calculateFinalTotal()" style="background-color: #f4f4f4;"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align:right; font-weight:bold;">Final Total (INR):</td>
+                    <td><input type="text" id="final-total" placeholder="0" readonly style="background-color: #f4f4f4;"></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+       
+        <br><br>
+       
+    </form>
+    <div>
+        <button type="button" onclick="submitForm()" class="btn-submit">Submit</button>
+    </div>
+</div>
+   
+</body>
+</html>

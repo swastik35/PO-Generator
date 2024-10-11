@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="swastik">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Purchase Order</title>
+        <link rel="stylesheet" href="viewPO.css">
+</head>
+<body>
+    <div class="print">
+        <div class="cardview">
+            <div class="later-head">
+                <img src="header.png" alt="Header">
+            </div>
+            <div class="group">
+               
+                    <p><strong>PO No.:</strong> <span id="PO-no-display"></span></p>
+                    <p><strong>Order Date:</strong> <span id="order-date-display"></span></p>
+               
+               
+            </div>
+            
+            
+            <p><strong>To,</strong><br> <span id="to-address-display"></span></p>
+            <br><br>
+            <!-- <label>Dear Sir,</label> -->
+             <br>
+            <!-- <p><strong>Subject:</strong> <span id="subject-display"></span></p>
+            <label class="beforetbl">With reference to above we are pleased to place our purchase order as per the details given below along with the terms and 
+                Conditions enumerated hereunder:</label>
+                <br>
+                <br> -->
+            <table id="items-display" class="items-table">
+                <thead>
+                    <tr>
+                        <th>Sl No.</th>
+                        <th>Item Description</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Qty</th>
+                        <th>UOM</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        
+            <p><strong>Grand Total:</strong> <span id="grand-total-display"></span></p>
+
+
+           
+            
+        </div>    
+    </div>
+
+    <button id="btn-print">Print</button>
+    <script src="ViewPOGen.js"></script>
+
+    <!--Below Scripts are use to print the <div class="print">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+    <script src="generator.js"></script>
+    
+
+</body>
+</html>
